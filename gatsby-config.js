@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `tpfz`,
+    author: `Afiq Xilantra`,
+    description: `Book a Muslim-friendly Tour for Your Next Trip`,
+    siteUrl: `https://tpfz.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `xilantra`,
     },
   },
   plugins: [
@@ -21,6 +21,12 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
       },
     },
     {

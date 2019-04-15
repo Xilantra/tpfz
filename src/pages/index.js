@@ -4,7 +4,13 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+// import {Grid, Col, Row} from 'react-styled-flexboxgrid'
+// import { scale, rhythm } from "../utils/typography"
+import styled from "styled-components"
+// import AniLink from "gatsby-plugin-transition-link/AniLink";
+// import {useTrail, animated} from 'react-spring'
+import HeroAnimation from "../components/heroTitle"
+
 
 class BlogIndex extends React.Component {
   render() {
@@ -15,11 +21,12 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          title="Muslim Friendly Tour"
+          keywords={[`muslim`, `trip`, `tpfz`, `muslim-friendly tour`]}
         />
-        <Bio />
-        {posts.map(({ node }) => {
+        <HeroAnimation />
+        {/* <Bio /> */}
+        {/* {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <div key={node.fields.slug}>
@@ -40,7 +47,7 @@ class BlogIndex extends React.Component {
               />
             </div>
           )
-        })}
+        })} */}
       </Layout>
     )
   }

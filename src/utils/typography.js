@@ -1,17 +1,18 @@
 import Typography from "typography"
-import Wordpress2016 from "typography-theme-wordpress-2016"
 
-Wordpress2016.overrideThemeStyles = () => {
-  return {
-    "a.gatsby-resp-image-link": {
-      boxShadow: `none`,
-    },
-  }
-}
+const typography = new Typography({
+  baseFontSize: '16px',
+  baseLineHeight: 1.5,
+  headerFontFamily: ['Playfair Display', 'Georgia', 'serif'],
+  bodyFontFamily: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
+})
 
-delete Wordpress2016.googleFonts
+// Output CSS as string.
+typography.toString()
 
-const typography = new Typography(Wordpress2016)
+// Or insert styles directly into the <head> (works well for client-only
+// JS web apps.
+typography.injectStyles()
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
