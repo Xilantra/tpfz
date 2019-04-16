@@ -1,6 +1,8 @@
 ---
-title: Hello World
+title: Ho Chi Minh
 date: "2015-05-01T22:12:03.284Z"
+pricing: "RM2,413"
+featuredImage: "./thumbnail.jpg"
 ---
 
 This is my first post on my new fake blog! How exciting!

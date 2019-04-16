@@ -3,7 +3,7 @@ import {Grid, Col, Row} from 'react-styled-flexboxgrid'
 import styled, {keyframes} from "styled-components"
 import { useSpring, useTrail, useChain, animated } from 'react-spring'
 // import Overdrive from 'react-overdrive'
-import { media } from "../utils/theme"
+import theme, { media } from "../utils/theme"
 import HeroImgSlider from "../components/hero-img-slider"
 
 const HeroWrapper = styled.div`
@@ -55,21 +55,27 @@ const SearchBar = styled.div`
   align-items: center;
   align-content: center;
   width: 100%;
-  animation: ${fadeIn} 2s linear;
+  animation: ${fadeIn} 0.3s linear;
   
   ${media.md`
     width: 504px;
   `}
 `
 const InputWrapper = styled.div`
- height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
   border-radius: 4px 0 0 4px;
   background-color: #EADECA;
 `
-const IconSearch = styled.div``
+const IconSearch = styled.svg`
+  margin-left: 0.5rem;
+  fill: currentColor;
+`
 const Input = styled.input`
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0.5rem;
   background-color: #EADECA;
   border: none;
   border-radius: 4px;
@@ -102,6 +108,11 @@ const Button = styled.button`
   /* Only if using bold text */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: ${theme.motion.steadyFx};
+
+  &:hover {
+    background: #d0731d;
+  }
 `
 const fadeIn = keyframes`
     from {
@@ -188,7 +199,7 @@ function HeroAnimation() {
                         
                         <SearchBar>
                         <InputWrapper>
-                            <IconSearch></IconSearch>
+                          <IconSearch xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M19.8 19.1l-4.4-4.4c-.2-.2-.6-.2-.8 0-1.1 1-2.5 1.6-4 1.6-3.1 0-5.6-2.5-5.6-5.6s2.5-5.6 5.6-5.6 5.6 2.5 5.6 5.6c0 .5-.1.9-.2 1.4-.1.3.1.6.4.7.3.1.6-.1.7-.4.1-.5.2-1.1.2-1.6 0-3.7-3-6.7-6.7-6.7S4 7 4 10.7s3 6.7 6.7 6.7c1.6 0 3.1-.6 4.4-1.6l4 4c.1.1.2.2.4.2.1 0 .3-.1.4-.2.2-.2.2-.5-.1-.7z"/></IconSearch>
                             <Input type="text" placeholder="Anywhere..."/>
                         </InputWrapper>
                         <Button>Search</Button>

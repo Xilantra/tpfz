@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import {Grid, Col, Row} from 'react-styled-flexboxgrid'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -18,24 +19,34 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
-        <Bio />
+        <Grid>
+          <Row>
+            <Col xs={12}>
+        <h1
+        style={{
+          ...scale(2),
+          display: `block`,
+          marginBottom: rhythm(1),
+          marginTop: rhythm(3),
+        }}
+        >{post.frontmatter.title}</h1>
+              <p
+            style={{
+              ...scale(-1 / 5),
+              display: `block`,
+              marginBottom: rhythm(1),
+              marginTop: rhythm(-1),
+            }}
+          >
+            {post.frontmatter.date}
+          </p>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <hr
+            style={{
+              marginBottom: rhythm(1),
+            }}
+          />
+          <Bio />
 
         <ul
           style={{
@@ -61,6 +72,9 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
+            </Col>
+          </Row>
+          </Grid>
       </Layout>
     )
   }
@@ -84,6 +98,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        pricing
       }
     }
   }

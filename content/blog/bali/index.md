@@ -1,6 +1,8 @@
 ---
-title: My Second Post!
+title: Bali
 date: "2015-05-06T23:46:37.121Z"
+pricing: "RM2,413"
+featuredImage: "./thumbnail.jpg"
 ---
 
 Wow! I love blogging so much already.
