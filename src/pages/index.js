@@ -6,12 +6,13 @@ import Image from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import {Grid, Col, Row} from 'react-styled-flexboxgrid'
-import { scale, rhythm } from "../utils/typography"
+// import { scale, rhythm } from "../utils/typography"
 import styled from "styled-components"
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+// import AniLink from "gatsby-plugin-transition-link/AniLink";
 // import {useTrail, animated} from 'react-spring'
 import HeroAnimation from "../components/heroTitle"
 import theme, { media } from "../utils/theme"
+import Overdrive from 'react-overdrive'
 
 const StyledGrid = styled(Grid)`
   padding: 0;
@@ -23,6 +24,7 @@ const CardContainer = styled.div`
   padding-top: 1rem;
   padding-bottom: 1rem;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 
   ${media.md`
     overflow-x: unset;
@@ -31,6 +33,8 @@ const CardContainer = styled.div`
 const CardScroller = styled.div`
   padding: 0 2rem;
   width: 1380px;
+  -webkit-overflow-scrolling: touch;
+
   ${media.md`
     padding: unset;
     width: unset;
@@ -52,12 +56,13 @@ const CardWrapper = styled.div`
   text-align: center;
   transition: all .25s ease-in-out;
 
-  &:hover {
-    transform: scale(1.1) ;
-  }
-
   ${media.md`
-    margin: 0.5rem;    
+    margin: 0.5rem;  
+    
+    &:hover {
+      transform: scale(1.1) ;
+    }
+  
 `}
 
   a {
@@ -145,22 +150,28 @@ class BlogIndex extends React.Component {
                 return (
                   <CardWrapper key={node.fields.slug}>
                     <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                      <Image
-                        fixed={node.frontmatter.featuredImage.childImageSharp.fixed}
-                        alt={title}
-                        style={{
-                        }}
-                        imgStyle={{
-                        }}
-                      />
+                      <Overdrive id="heroImg">
+                        <Image
+                          fixed={node.frontmatter.featuredImage.childImageSharp.fixed}
+                          alt={title}
+                          style={{
+                          }}
+                          imgStyle={{
+                          }}
+                        />
+                      </Overdrive>
                       <TopInfo>
                         <TopInfoText>{node.frontmatter.days}</TopInfoText>
                       </TopInfo>
                       <ImgCaption>
-                        <CardTitle>{title}</CardTitle>
-                        <dt>
-                          <Del><small>{node.frontmatter.currency}</small>{node.frontmatter.originalPrice}</Del> <span style={{fontWeight: `normal`}}>|</span> <small>{node.frontmatter.currency}</small>{node.frontmatter.finalPrice}
-                        </dt>
+                        <Overdrive id="cardTitle">
+                          <CardTitle>{title}</CardTitle>
+                        </Overdrive>
+                        <Overdrive id="card*riceInfo">
+                          <dt>
+                            <Del><small>{node.frontmatter.currency}</small>{node.frontmatter.originalPrice}</Del> <span style={{fontWeight: `normal`}}>|</span> <small>{node.frontmatter.currency}</small>{node.frontmatter.finalPrice}
+                          </dt>
+                        </Overdrive>
                       </ImgCaption>
                       
                       {/* <p

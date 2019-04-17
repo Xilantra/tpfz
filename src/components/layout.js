@@ -6,7 +6,7 @@ import { rhythm, scale } from "../utils/typography"
 import GlobalStyle from "../utils/globalStyle";
 import {Grid, Col, Row} from 'react-styled-flexboxgrid'
 import theme, { media } from "../utils/theme"
-// import Overdrive from 'react-overdrive'
+import Overdrive from 'react-overdrive'
 import { useSpring, useTrail, useChain, animated } from 'react-spring'
 
 const Nav = styled.nav`
@@ -109,11 +109,13 @@ class Layout extends React.Component {
       header = (
         <Row>
           <Col xs={12} md={8}>
-            <Logo>
-              <Link to={`/`}>
-              {title}<Dot>.</Dot>
-              </Link>
-            </Logo>
+            <Overdrive id="logoFx">
+              <Logo>
+                <Link to={`/`}>
+                {title}<Dot>.</Dot>
+                </Link>
+              </Logo>
+            </Overdrive>
           </Col>
           <NavLinksAnimation />
         </Row>
@@ -123,11 +125,13 @@ class Layout extends React.Component {
       header = (
         <Row>
         <Col xs={12} md={8}>
-          <LogoSmall>
-            <Link to={`/`}>
-              {title}<Dot>.</Dot>
-            </Link>
-          </LogoSmall>
+          <Overdrive id="logoFx">
+            <LogoSmall>
+              <Link to={`/`}>
+                {title}<Dot>.</Dot>
+              </Link>
+            </LogoSmall>
+          </Overdrive>
         </Col>
         <NavLinksAnimation />
       </Row>

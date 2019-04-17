@@ -68,7 +68,7 @@ const SearchBar = styled.div`
   align-items: center;
   align-content: center;
   width: 100%;
-  animation: ${fadeIn} 0.3s linear;
+  animation: ${fadeIn} 0.6s ease-in-out;
   z-index: 9;
   
   ${media.md`
