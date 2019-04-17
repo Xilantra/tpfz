@@ -11,8 +11,9 @@ import { useSpring, useTrail, useChain, animated } from 'react-spring'
 
 const Nav = styled.nav`
   z-index: 9;
+  position: fixed;
+
   ${media.md`
-    position: fixed;
     width: 94%;
   `}
 `
@@ -53,7 +54,7 @@ const FixedNav = styled(Col)`
   bottom: 0;
   left: 0;
   right: 0;
-  height: 5rem;
+  height: 4.2rem;
   padding: 0.5rem 2rem;
   background: #fff;
   z-index: 1024;

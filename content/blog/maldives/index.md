@@ -1,7 +1,10 @@
 ---
 title: Maldives
 date: "2015-05-06T23:46:37.121Z"
-pricing: "RM2,413"
+days: 3D2N
+currency: RM
+originalPrice: "1,276"
+finalPrice: "1,100"
 featuredImage: "./thumbnail.jpg"
 ---
 

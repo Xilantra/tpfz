@@ -16,16 +16,20 @@ const HeroTitleWrapper = styled.div`
   align-content: flex-start;
   height: 100%;
   padding: 1.5rem;
+  margin-top: -50vh;
 
   ${media.md`
     padding: 1rem;
+    margin-top: unset;
   `}
 `
 const HeroTitle = styled.h1`
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
+  color: #fff;
 
   ${media.md`
+    color: inherit;
     font-size: 4.5rem;
   `}
 `
@@ -40,12 +44,21 @@ const AnimatedHeroTitleSmall = styled(animated.div)`
     overflow: hidden;
 `
 const AnimatedHeroTitleWrapper = styled(animated.div)`
-    display: inline-block;
-    height: 88px;
+  display: inline-block;
+  height: 2.7rem !important;
+  
+  ${media.md`
+    height: 88px !important;
+`}
 `
 const AnimatedHeroTitle = styled(animated.div)`
   padding-right: 2rem;
-    overflow: hidden;
+  overflow: hidden;
+  height: 2.7rem !important;
+  
+  ${media.md`
+    height: 88px !important;
+`}
 `
 
   
@@ -56,6 +69,7 @@ const SearchBar = styled.div`
   align-content: center;
   width: 100%;
   animation: ${fadeIn} 0.3s linear;
+  z-index: 9;
   
   ${media.md`
     width: 504px;

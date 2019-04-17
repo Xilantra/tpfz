@@ -1,7 +1,10 @@
 ---
 title: Spain
 date: "2015-05-06T23:46:37.121Z"
-pricing: "RM2,413"
+days: 3D2N
+currency: RM
+originalPrice: "7,920"
+finalPrice: "7,299"
 featuredImage: "./thumbnail.jpg"
 ---
 

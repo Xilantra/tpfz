@@ -1,7 +1,10 @@
 ---
 title: Taiwan
 date: "2015-05-06T23:46:37.121Z"
-pricing: "RM2,413"
+days: 3D2N
+currency: RM
+originalPrice: "2,620"
+finalPrice: "2,413"
 featuredImage: "./thumbnail.jpg"
 ---
 

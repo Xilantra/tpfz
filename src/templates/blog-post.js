@@ -46,7 +46,7 @@ class BlogPostTemplate extends React.Component {
               marginBottom: rhythm(1),
             }}
           />
-          <Bio />
+          {/* <Bio /> */}
 
         <ul
           style={{
@@ -98,7 +98,10 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
-        pricing
+        days
+        currency
+        originalPrice
+        finalPrice
       }
     }
   }

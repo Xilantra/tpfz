@@ -1,7 +1,10 @@
 ---
 title: Ho Chi Minh
 date: "2015-05-01T22:12:03.284Z"
-pricing: "RM2,413"
+days: 3D2N
+currency: RM
+originalPrice: "700"
+finalPrice: "599"
 featuredImage: "./thumbnail.jpg"
 ---
 

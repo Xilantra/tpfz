@@ -2,8 +2,11 @@
 title: Gold Coast
 date: "2015-05-28T22:40:32.169Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+days: 3D2N
+currency: RM
+originalPrice: "1,100"
+finalPrice: "950"
 featuredImage: "./thumbnail.jpg"
-pricing: "RM2,413"
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

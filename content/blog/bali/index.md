@@ -1,7 +1,10 @@
 ---
 title: Bali
 date: "2015-05-06T23:46:37.121Z"
-pricing: "RM2,413"
+days: 3D2N
+currency: RM
+originalPrice: "300"
+finalPrice: "199"
 featuredImage: "./thumbnail.jpg"
 ---
 
